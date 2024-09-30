@@ -1,0 +1,43 @@
+name: Update
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - uses: axel-op/googlejavaformat-action@v3.6.0
+        if: steps.changes.outputs.java-src == 'true'
+        continue-on-error: true
+        with:
+          files: "src/**/*.java"
+          args: "-r -a"
+
+      - uses: actions/setup-java@v4.2.1
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'gradle'
+ 
+      - uses: gradle/actions/setup-gradle@v3
+
+      - name: Push changes
+        continue-on-error: true
+        if: always()
+        run: |
+          git config --global user.email "ikomangwidiadaariasa12@gmail.com"
+          git config --global user.name "AriasaProp"
+          git add .
+          git commit -m "Reformatting Code Sources"
+          git push
+
+      - run: gradle build -Prelease
+
+      - name: Upload Android APK
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: APK
+          path: ${{ github.workspace }}/build/outputs/apk/release
