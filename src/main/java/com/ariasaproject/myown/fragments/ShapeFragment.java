@@ -27,7 +27,7 @@ public class ShapeFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(
-                        	context,
+                                        context,
                                         "You selected: " + shapeSelector.getSelectedShape(),
                                         Toast.LENGTH_LONG)
                                 .show();
@@ -49,7 +49,7 @@ public class ShapeFragment extends Fragment {
         ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_shape, container, false);
         shapeSelector = (ShapeSelectorView) v.findViewById(R.id.shapeSelector);
         btnSelect = (AppCompatButton) v.findViewById(R.id.btnSelect);
-        
+
         return v;
     }
 
