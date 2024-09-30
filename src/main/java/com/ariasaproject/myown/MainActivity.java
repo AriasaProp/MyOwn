@@ -18,9 +18,9 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.ariasaproject.myown.fragments.DrawFragment;
-import com.ariasaproject.myown.fragments.NoneFragment;
 import com.ariasaproject.myown.fragments.ShapeFragment;
+import com.ariasaproject.myown.fragments.DashboardFragment;
+import com.ariasaproject.myown.fragments.DrawFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                                 return new ShapeFragment();
                             default:
                             case 1:
-                                return new NoneFragment();
+                                return new DashboardFragment();
                             case 2:
                                 return new DrawFragment();
                         }
