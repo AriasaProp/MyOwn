@@ -22,7 +22,6 @@ public class ShapeFragment extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        
     }
 
     @Override
@@ -39,7 +38,7 @@ public class ShapeFragment extends Fragment {
         ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_shape, container, false);
         shapeSelector = (ShapeSelectorView) v.findViewById(R.id.shapeSelector);
         btnSelect = (AppCompatButton) v.findViewById(R.id.btnSelect);
-btnSelect.setOnClickListener(
+        btnSelect.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
