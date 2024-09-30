@@ -51,6 +51,10 @@ android {
     lint {
         abortOnError false
     }
+    compileOptions {
+    		sourceCompatibility = JavaVersion.VERSION_23
+    		targetCompatibility = JavaVersion.VERSION_23
+    }
 }
 
 dependencies {
