@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.ariasaproject.myown.R;
 import com.ariasaproject.myown.views.ShapeSelectorView;
@@ -38,7 +39,7 @@ public class ShapeFragment extends Fragment {
         shapeSelector = (ShapeSelectorView) v.findViewById(R.id.shapeSelector);
         btnSelect = (AppCompatButton) v.findViewById(R.id.btnSelect);
         btnSelect.setOnClickListener(
-                new OnClickListener() {
+                new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(
