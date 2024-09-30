@@ -8,17 +8,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
 
-      - uses: axel-op/googlejavaformat-action@v3.6.0
-        with:
-          files: "src/**/*.java"
-          args: "-r -a"
-
       - uses: actions/setup-java@v4.2.1
         with:
           java-version: '23'
           distribution: 'temurin'
           cache: 'gradle'
  
+      - uses: axel-op/googlejavaformat-action@v3.6.0
+        with:
+          files: "src/**/*.java"
+          args: "-r -a"
+          skip-commit: true
+
       - uses: gradle/actions/setup-gradle@v3
 
       - name: Push changes
