@@ -6,11 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4.1.1
 
       - uses: axel-op/googlejavaformat-action@v3.6.0
-        if: steps.changes.outputs.java-src == 'true'
         continue-on-error: true
         with:
           files: "src/**/*.java"
@@ -18,7 +16,7 @@ jobs:
 
       - uses: actions/setup-java@v4.2.1
         with:
-          java-version: '21'
+          java-version: '23'
           distribution: 'temurin'
           cache: 'gradle'
  
@@ -26,7 +24,6 @@ jobs:
 
       - name: Push changes
         continue-on-error: true
-        if: always()
         run: |
           git config --global user.email "ikomangwidiadaariasa12@gmail.com"
           git config --global user.name "AriasaProp"

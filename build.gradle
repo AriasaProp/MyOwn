@@ -57,8 +57,3 @@ dependencies {
     implementation 'com.android.support:support-v4:27.0.2'
 }
 
-
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
