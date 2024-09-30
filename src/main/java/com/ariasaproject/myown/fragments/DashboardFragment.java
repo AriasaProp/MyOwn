@@ -1,5 +1,6 @@
 package com.ariasaproject.myown.fragments;
 
+import android.content.SharedPreferences;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,8 +31,9 @@ public class DashboardFragment extends Fragment {
             @NonNull LayoutInflater inflater,
             @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
-        ViewGroup v = inflater.inflate(R.layout.fragment_none, container, false);
-
+        ViewGroup v = (ViewGroup)inflater.inflate(R.layout.fragment_dashboard, container, false);
+        
+        
         return v;
     }
 
@@ -48,8 +50,10 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-
-        // SharedPreferences data = getActivity().getPreferences(Context.MODE_PRIVATE);
+        
+        
+        
+        //SharedPreferences data = getActivity().getPreferences(Context.MODE_PRIVATE);
     }
 
     @Override
