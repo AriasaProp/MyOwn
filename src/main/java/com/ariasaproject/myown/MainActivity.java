@@ -18,9 +18,9 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.ariasaproject.myown.fragments.ShapeFragment;
-import com.ariasaproject.myown.fragments.NoneFragment;
 import com.ariasaproject.myown.fragments.DrawFragment;
+import com.ariasaproject.myown.fragments.NoneFragment;
+import com.ariasaproject.myown.fragments.ShapeFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
