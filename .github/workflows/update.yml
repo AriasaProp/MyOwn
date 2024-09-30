@@ -18,18 +18,8 @@ jobs:
         with:
           files: "src/**/*.java"
           args: "-r -a"
-          skip-commit: true
 
       - uses: gradle/actions/setup-gradle@v3
-
-      - name: Push changes
-        continue-on-error: true
-        run: |
-          git config --global user.email "ikomangwidiadaariasa12@gmail.com"
-          git config --global user.name "AriasaProp"
-          git add .
-          git commit -m "Reformatting Code Sources"
-          git push
 
       - run: gradle build -Prelease
 
