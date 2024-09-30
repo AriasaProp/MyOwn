@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         app:displayShapeName="true"
         app:shapeColor="#7f0000" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         android:text="Select a Shape:"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:layout_toRightOf="@+id/shapeSelector"
         android:text="&lt;-- Toggle Between Them Here" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CustomViewDemo</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_shape_demo">ShapeDemoActivity</string>
-    <string name="title_activity_drawing">DrawingActivity</string>
+    <string name="app_name">My Own</string>
 
 </resources>
