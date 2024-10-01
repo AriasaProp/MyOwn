@@ -29,7 +29,7 @@
     </style>
     
     <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
-    		<item name="app:tabIndicatorColor">@color/colorAccent</item>
-    		<item name="app:tabBackground">@drawable/selector_background</item>
+    		<item name="tabIndicatorColor">@color/colorAccent</item>
+    		<item name="tabBackground">@drawable/selector_background</item>
     </style>
 </resources>
