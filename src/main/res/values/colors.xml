@@ -12,5 +12,8 @@
     
     <color name="tabItem_on">#22000000</color>
     <color name="tabItem_off">#00000000</color>
+    
+    <color name="pieChartFill1">#FF4242</color>
+    <color name="pieChartFill2">#FFF55F</color>
 
 </resources>
