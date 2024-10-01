@@ -10,7 +10,7 @@
     <color name="colorAccent">#716A5C</color>
     
     
-    <color name="tabItem_on">#11000000</color>
+    <color name="tabItem_on">#22000000</color>
     <color name="tabItem_off">#00000000</color>
 
 </resources>
