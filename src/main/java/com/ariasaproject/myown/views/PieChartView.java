@@ -2,9 +2,7 @@ package com.ariasaproject.myown.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -16,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PieChartView extends View {
-    
+
     private final Paint piePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final RectF pieRect = new RectF();
@@ -76,8 +74,12 @@ public class PieChartView extends View {
 
             // Draw slice text (optional)
             float textAngle = currentAngle + sweepAngle / 2f;
-            double textX = pieRect.centerX() + Math.cos(Math.toRadians(textAngle)) * (pieRect.width() / 3f);
-            double textY = pieRect.centerY() + Math.sin(Math.toRadians(textAngle)) * (pieRect.height() / 3f);
+            double textX =
+                    pieRect.centerX()
+                            + Math.cos(Math.toRadians(textAngle)) * (pieRect.width() / 3f);
+            double textY =
+                    pieRect.centerY()
+                            + Math.sin(Math.toRadians(textAngle)) * (pieRect.height() / 3f);
             String text = slice.getLabel() + " (" + slice.getValue() + ")"; // Adjust text format
             canvas.drawText(text, (float) textX, (float) textY, textPaint);
 
